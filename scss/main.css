@@ -216,7 +216,7 @@ body {
 }
 
 .logo {
-  font-size: 2rem;
+  font-size: 2.5rem;
   text-transform: uppercase;
   color: #fff;
   -webkit-user-select: none;
@@ -230,6 +230,7 @@ body {
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
+  font-family: 'Eater', cursive;
 }
 
 .main-nav {
@@ -242,7 +243,7 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding-top: 1.5rem;
+  padding-top: 1rem;
 }
 
 .main-nav ul {
