@@ -1,0 +1,169 @@
+// >> Container
+.container {
+    max-width: $website-width;
+    margin: auto;
+    padding: 0 2rem;
+}
+
+
+a {
+    text-decoration: none;
+    color: #fff;
+    user-select: none;
+}
+
+
+li {
+    list-style: none;
+}
+
+h2, h3, h4, h5 {
+    text-transform: uppercase;
+}
+
+img {
+    width: 100%;
+}
+
+
+.text-center {
+    text-align: center;
+}
+
+.lead {
+    font-size: 18px;
+    margin-bottom: 2rem;
+}
+
+
+// >> padding top left right and bottom
+
+.py {
+    &-1 { padding: 1rem 0;}
+    &-2 { padding: 2rem 0;}
+    &-3 { padding: 3rem 0;}
+    &-4 { padding: 4rem 0;}
+    &-5 { padding: 5rem 0;}
+}
+
+.py-lr {
+    &-1 { padding: 0rem 1rem;}
+    &-2 { padding: 0rem 2rem;}
+    &-3 { padding: 0rem 3rem;}
+    &-4 { padding: 0rem 4rem;}
+    &-5 { padding: 0rem 5rem;}
+}
+
+
+// >> margin top left right and bottom
+
+.my {
+    &-1 { margin: 1rem 0;}
+    &-2 { margin: 2rem 0;}
+    &-3 { margin: 3rem 0;}
+    &-4 { margin: 4rem 0;}
+    &-5 { margin: 5rem 0;}
+}
+
+.my-lr {
+    &-1 { margin: 1rem 1rem;}
+    &-2 { margin: 2rem 2rem;}
+    &-3 { margin: 3rem 3rem;}
+    &-4 { margin: 4rem 4rem;}
+    &-5 { margin: 5rem 5rem;}
+}
+
+
+
+// >>  Background Color
+.bg {
+    &-main {
+        background: $main-color;
+        color: set-text-color($main-color);
+    }
+    &-light {
+        background: $light-color;
+        color: set-text-color($light-color);
+    }
+    &-medium {
+        background: $medium-color;
+        color: set-text-color($medium-color);
+    }
+    &-dark {
+        background: $dark-color;
+        color: set-text-color($dark-color);
+    }
+}
+
+// >> Buttons 
+
+
+%btnShared {
+    display: inline-block;
+    padding: 0.6rem 1.8rem;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 4px;
+    user-select: none;
+    font-size: 17px
+}
+
+
+.btn {
+    &-light {
+        @extend %btnShared;
+        background: $light-color;
+        color: $dark-color;
+    }
+
+    &-dark {
+        @extend %btnShared;
+        background: $dark-color;
+        color: $light-color;
+    }
+
+    &-main {
+        @extend %btnShared;
+        background: $main-color;
+        color: $light-color;
+    }
+
+    &-medium {
+        @extend %btnShared;
+        background: $medium-color;
+        color: $dark-color;
+    }
+}
+
+button[class^='btn-'],
+input[class^='btn-'],
+a[class^='btn-'] {
+    &:hover {
+        background: $main-color;
+    }
+} 
+
+
+// >> section title
+.section-title {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    display: block;
+    text-align: center;
+    font-weight: 100;
+    text-transform: uppercase; 
+}
+
+
+// >> Bottom Line
+.bottom-line {
+    height: 4px;
+    width: 6rem;
+    background: #ffbc00;
+    display: block;
+    margin: 0 auto 1rem auto;
+    border-radius: 3px;
+}
+
+

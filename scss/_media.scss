@@ -1,0 +1,271 @@
+@media(max-width: 768px) {
+
+    #header {
+        &-home {
+            height: 30rem;
+        }
+
+        &-content {
+            padding-top: 5rem;
+        }
+    }
+
+// >> All grid Columns
+    .specials, 
+    .stats,
+    .process,
+    .testimonials,
+    .items {
+        display: grid;
+        grid-template-columns: 1fr 1fr !important;
+        grid-gap: 1rem;
+        box-shadow: none !important;
+
+        .item  {
+            box-shadow: 0px 5px 15px 0 rgba(0, 0, 0, 0.3);
+            border-radius: 5px;
+        }
+    }
+
+
+    .about-info {
+        grid-template-areas: 
+            'bioimage'
+            'bio'
+            'aw1'
+            'aw2'
+            'aw3'
+            !important
+        ;
+
+        padding: 0 5rem;
+
+        .bio-image {
+            grid-area: bioimage;
+        }
+
+        .bio {
+            grid-area: bio;
+        }
+
+        .award-1 {grid-area: aw1;}
+        .award-2 {grid-area: aw2;}
+        .award-3 {grid-area: aw3;}
+    }
+
+}
+
+// >> max-500px
+@media(max-width: 500px) {
+
+    .main-nav {
+        display: flex;
+        flex-direction: column;
+
+        ul {
+            li {
+                padding: 0.8rem 1rem;
+
+                a {
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+
+    #header {
+        
+        &-home {
+            height: 10rem;
+            border-bottom: 3px solid $main-color;
+            background-position: 20% 30%;
+        }
+
+        &-content {
+            display: none;
+        }
+
+        &-inner {
+            height: 10rem;
+        }
+    }
+
+// >> All grid Columns
+    .specials, 
+    .stats,
+    .process,
+    .testimonials,
+    .items {
+        display: grid;
+        grid-template-columns: 1fr !important;
+        grid-gap: 0rem;
+        box-shadow: none !important;
+
+        .item  {
+            box-shadow: 0px 5px 15px 0 rgba(0, 0, 0, 0.3);
+            border-radius: 5px;
+        }
+    }
+
+    .items {
+        grid-gap: 1rem !important;
+    }
+
+    .process,
+    .specials {
+        p {
+            font-size: 15px;
+        }
+        div:not(:last-child) {
+            border-bottom: 1px solid $medium-color;
+            padding-bottom: 1.5rem;
+        }
+    }
+
+
+    .about-info {
+        grid-template-areas: 
+            'bioimage'
+            'bio'
+            'aw1'
+            'aw2'
+            'aw3'
+            
+        ;
+
+        padding: 0;
+
+        .bio-image {
+            grid-area: bioimage;
+        }
+
+        .bio {
+            grid-area: bio;
+        }
+
+        .award-1 {
+            grid-area: aw1;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid $medium-color;
+        }
+        .award-2 {
+            grid-area: aw2;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid $medium-color;
+        }
+
+        .award-3 {grid-area: aw3;}
+    }
+
+
+    #about {
+        &-b {
+            .progress {
+                height: 1.4rem;
+            }
+        }
+
+        &-c {
+            display: none;
+        }
+    }
+
+    // >> Contact Page
+    #contact {
+        &-a {
+            .text-fields {
+                display: grid;
+                grid-gap: 1.5rem;
+                grid-template-areas: 
+                    'name'
+                    'email'
+                    'subject'
+                    'phone'
+                    'message'
+                ;
+    
+    
+                .name-input {
+                    grid-area: name;
+                }
+                .email-input {
+                    grid-area: email;
+                }
+                .subject-input {
+                    grid-area: subject;
+                }
+                .phone-input {
+                    grid-area: phone;
+                }
+                .message-input {
+                    grid-area: message;
+                    height: 170px;
+                }
+            }
+        }
+
+        &-b {
+            .contact-info {
+                grid-template-columns:1fr !important ;
+
+                div {
+                    margin-bottom: 1.5rem;
+                    padding-bottom: 1rem;
+                    border-bottom: 1px #555 solid;
+                    &:last-child {
+                        border-bottom: none;
+                        margin-bottom: 0;
+                    }
+                }
+            } 
+        }
+
+        &-c {
+            h1 {
+                font-size: 2.5rem;
+            }
+        }
+
+        &-d {
+            .cd-lead {
+                width: 100%;
+            }
+        }
+    }
+
+    // >> footer
+    #main-footer {
+        height: 7rem;
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            padding: 1rem;
+            height: 7rem;
+        }
+    }
+    
+}
+
+
+// >> for iphone 5/se
+@media(max-width: 320px) {
+    .main-nav {
+        ul {
+            li {
+                padding: 0.8rem 0.7rem;
+
+                a {
+                    font-size: 15px;
+                }
+            }
+        }
+    }
+}
+
+@media(max-height: 850px) {
+    #header {
+        &-content {
+            padding-top: 2rem;
+        }
+    }
+}

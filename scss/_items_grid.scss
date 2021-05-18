@@ -1,0 +1,74 @@
+#work {
+    &-a {
+        .items {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.2);
+            margin-bottom: 1.2rem;
+            
+            .item {
+                position: relative;
+                overflow: hidden;
+                &::after {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    height: 100%;
+                    width: 100%;
+                    background: $main-color;
+                    opacity: 0.9;
+                    transform: scale(2) translateX(-75%) translateY(-75%) rotate(-45deg);
+                    transition: transform 3s cubic-bezier(0.2, 1, 0.3, 1);
+                }
+
+                &:hover  {
+                    &::after {
+                        transform: scale(2) translateX(0) translateY(0) rotate(-45deg);
+                    }
+
+
+                    & .item-text {
+                        transform: translateY(35%);
+                    }
+                }
+                
+                &-text {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    z-index: 1111;
+                    transform: translateY(-110%);
+                    transition: transform 3s cubic-bezier(0.2, 1, 0.3, 1);
+                    
+
+                    &-wrap {
+                       >  a  {
+                            font-size: 15px;
+
+                            &:hover {
+                                background: #777;
+                            }
+                        }
+                    }
+
+                    &-catagory  {
+                        text-transform: uppercase;
+                        font-size: 1.2rem;
+                        margin: 0;
+                        color: #fff;
+                    }
+
+                    &-title {
+                        font-size: 1.7rem;
+                        padding: 0 1rem;
+                        margin: 5px 0 8px 0;
+                        color: #fff;
+                    }
+                }
+            }
+        }
+    }
+}
